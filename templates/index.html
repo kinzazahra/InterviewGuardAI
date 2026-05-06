@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>InterviewGuard AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧠 InterviewGuard AI</h1>
+
+        <h2>AI Interview Monitoring System</h2>
+
+        <div class="video-box">
+            <img src="{{ url_for('video') }}" width="700">
+        </div>
+
+        <a href="/report">
+            <button>View Report</button>
+        </a>
+
+    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

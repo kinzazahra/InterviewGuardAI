@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Suspicion Report</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Interview Report</h1>
+
+    <div class="report-card">
+
+        <h2>Trust Score: {{ score }}</h2>
+
+        <h2>Status:
+            {% if status == "Normal" %}
+                ✅ Normal
+            {% elif status == "Suspicious" %}
+                ⚠️ Suspicious
+            {% else %}
+                🚨 High Risk
+            {% endif %}
+        </h2>
+
+        <h3>Tab Switches: {{ tab_switches }}</h3>
+
+        <h3>Suspicious Events:</h3>
+
+        <ul>
+            {% for event in events %}
+                <li>{{ event }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
